@@ -1,7 +1,6 @@
 body{
     margin: 0;
     background-color: rgb(0, 0, 0);
-    max-height: 10vh;
 }
 
 /*--------------------------------NAVEGAÇÃO-------------------------------*/
@@ -12,7 +11,11 @@ body{
     height: 150px;
     width: 100%;
     align-items: center;
-    /*background-color: aqua;*/
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    box-shadow: 0px 3px 3px 0px rgb(235, 157, 42);
 }
 .nave ul{
     display: grid;
@@ -85,7 +88,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0px -3px 3px 0px rgb(235, 157, 42);
+    
     border-top: 2px solid black;
     position: relative;
     margin-bottom: 100px;
