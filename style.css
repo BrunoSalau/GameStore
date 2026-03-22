@@ -1,0 +1,778 @@
+/*--------------------------------GERAL-------------------------------*/
+body{
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+.titulo{
+    font-size: clamp(40px, 4vw, 500px);
+    font-family: "Momo Trust Display", sans-serif;
+    margin-bottom: 50px;
+    color: rgb(235, 157, 42);
+    filter: drop-shadow(2px 2px 3px rgb(109, 85, 18));
+    text-align: center;
+}
+/*------------------------------BOAS VINDAS---------------------------------*/
+.principal{
+    display: flex;
+}
+.principal::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url('IMG/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+.direita{
+    background-color: rgba(255, 255, 255, 0.658);
+    height: 100vh;
+    width: 80%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.esquerda{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video{
+    background-color: rgba(0, 0, 0, 0.363);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    width: 500px;
+    column-gap: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px black;
+}
+.video video{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px 1px black;
+}
+.trecker{
+    display: flex;
+    width: 500px;
+    animation: slide2 30s infinite;
+    border-radius: 20px;
+    column-gap: 20px;
+}
+
+.title{
+    font-size: clamp(20px, 2.5vw, 50px);
+    font-family: "Momo Trust Display", sans-serif;
+    margin-bottom: 10px;
+    color: rgb(230, 123, 62);
+    filter: drop-shadow(2px 2px 3px rgb(109, 85, 18));
+    text-align: center;
+    filter: drop-shadow(5px 5px 2px black);
+}
+.title h1{
+    margin: 0;
+}
+.des{
+    text-align: center;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: bold;
+    margin-top:50px;
+    margin-bottom:50px;
+    color: black;
+    filter: drop-shadow(1px 1px 1px rgb(230, 123, 62));
+}
+.primeiraOP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 100px;
+    row-gap: 50px;
+}
+.primeiraOP a{
+    text-decoration: none;
+    font-size: clamp(20px, 2vw, 50px);
+    border-radius: 20px;
+    background-color: rgb(230, 123, 62);
+    padding: 12px;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: bold;
+    color: white;
+    border: 2px solid rgb(230, 123, 62);
+}
+.primeiraOP a:hover{
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px 0px black;
+    transition: 0.5s;
+}
+.primeiraOP a:not(:hover){
+    transition:0.5s;
+}
+@keyframes slide2{
+     /*IMG 1*/ 
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(0); }
+
+     /*1 → 2*/
+    15%  { transform: translateX(-520px); }
+
+     /*IMG 2*/ 
+    20%  { transform: translateX(-520px); }
+    30%  { transform: translateX(-520px); }
+
+     /*2 → 3*/
+    35%  { transform: translateX(-1040px); }
+
+     /*IMG 3*/
+    40%  { transform: translateX(-1040px); }
+    50%  { transform: translateX(-1040px); }
+
+     /*3 → 4*/
+    55%  { transform: translateX(-1560px); }
+
+     /*IMG 4*/ 
+    60%  { transform: translateX(-1560px); }
+    70%  { transform: translateX(-1560px); }
+
+     /*4 → 5 */
+    75%  { transform: translateX(-2080px); }
+
+     /*IMG 5*/ 
+    80%  { transform: translateX(-2080px); }
+    90%  { transform: translateX(-2080px); }
+    
+     /*4 → 5 */
+    95%  { transform: translateX(-2600px); }
+
+     /*IMG 5*/ 
+    100%  { transform: translateX(-2600px); }
+
+    }
+/*-----------------------------RESPONSIVIDADE (Boas vindas)-----------------------------*/
+@media (max-width:900px){
+    .principal{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+    .esquerda{
+        height: 200px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+    .video{
+        width: 200px;
+    }
+    .video video{
+        width: 200px;
+    }
+    .direita{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        height: 100%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .des{
+        color: white;
+        filter: drop-shadow(1px 1px 1px rgb(0, 0, 0));
+    }
+    @keyframes slide2{
+     /*IMG 1*/ 
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(0); }
+
+     /*1 → 2*/
+    15%  { transform: translateX(-220px); }
+
+     /*IMG 2*/ 
+    20%  { transform: translateX(-220px); }
+    30%  { transform: translateX(-220px); }
+
+     /*2 → 3*/
+    35%  { transform: translateX(-440px); }
+
+     /*IMG 3*/
+    40%  { transform: translateX(-440px); }
+    50%  { transform: translateX(-440px); }
+
+     /*3 → 4*/
+    55%  { transform: translateX(-660px); }
+
+     /*IMG 4*/ 
+    60%  { transform: translateX(-660px); }
+    70%  { transform: translateX(-660px); }
+
+     /*4 → 5 */
+    75%  { transform: translateX(-880px); }
+
+     /*IMG 5*/ 
+    80%  { transform: translateX(-880px); }
+    90%  { transform: translateX(-880px); }
+    
+     /*4 → 5 */
+    95%  { transform: translateX(-1100px); }
+
+     /*IMG 5*/ 
+    100%  { transform: translateX(-1100px); }
+
+    }
+}
+/*-----------------------------RESPONSIVIDADE (login e register)-----------------------------*/
+@media (min-width:600px){
+    .registro{
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.658);
+        box-shadow: 0px 0px 40px 0px black;
+        padding-bottom: 10px;
+        width: 500px;
+    }
+    .formulario input{
+        font-size: 20px;
+        width: 400px;
+        border-radius: 10px;
+        height: 30px;
+        background-color: rgb(230, 123, 62);
+        border: 2px solid rgb(230, 123, 62);
+        padding: 5px;
+        transform: translateY(-30px);
+        color: white;
+    }
+    .imagem img{
+    width: 500px;
+    }
+    @keyframes slide{
+     /*IMG 1*/ 
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(0); }
+
+     /*1 → 2*/
+    20%  { transform: translateX(-500px); }
+
+     /*IMG 2*/ 
+    30%  { transform: translateX(-500px); }
+
+     /*2 → 3*/
+    40%  { transform: translateX(-1000px); }
+
+     /*IMG 3*/
+    55%  { transform: translateX(-1000px); }
+
+     /*3 → 4*/
+    65%  { transform: translateX(-1500px); }
+
+     /*IMG 4*/ 
+    80%  { transform: translateX(-1500px); }
+
+     /*4 → 5 */
+    90%  { transform: translateX(-2000px); }
+
+     /*IMG 5*/ 
+    100%  { transform: translateX(-2000px); }
+    }
+}
+@media (max-width:599px){
+    .primeiraOP{
+    display: flex;
+    flex-direction: column;
+    }
+    .registro{
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.658);
+        box-shadow: 0px 0px 40px 0px black;
+        padding-bottom: 10px;
+        width: 300px;
+    }
+    .formulario input{
+        font-size: 20px;
+        width: 200px;
+        border-radius: 10px;
+        height: 30px;
+        background-color: rgb(230, 123, 62);
+        border: 2px solid rgb(230, 123, 62);
+        padding: 5px;
+        transform: translateY(-30px);
+        color: white;
+    }
+    .imagem img{
+    width: 300px;
+    }
+    @keyframes slide{
+     /*IMG 1*/ 
+    0%   { transform: translateX(0); }
+    10%  { transform: translateX(0); }
+
+     /*1 → 2*/
+    20%  { transform: translateX(-300px); }
+
+     /*IMG 2*/ 
+    30%  { transform: translateX(-300px); }
+
+     /*2 → 3*/
+    40%  { transform: translateX(-600px); }
+
+     /*IMG 3*/
+    55%  { transform: translateX(-600px); }
+
+     /*3 → 4*/
+    65%  { transform: translateX(-900px); }
+
+     /*IMG 4*/ 
+    80%  { transform: translateX(-900px); }
+
+     /*4 → 5 */
+    90%  { transform: translateX(-1200px); }
+
+     /*IMG 5*/ 
+    100%  { transform: translateX(-1200px); }
+}
+}
+
+
+/*--------------------------------REGISTRO / LOGIN------------------------------*/
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.menu::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url('IMG/img1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+.imagem{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.animation{
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+/*-----------------------IMAGEM (REGISTRO LOGIN)--------------------*/
+.regis{
+    display: flex;
+    margin-top: 20px;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: bold;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 20px;
+    color:rgb(230, 123, 62);
+}
+.regis h1{
+    filter: drop-shadow(1px 1px 1px black);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-inline: 40px;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+.formulario input:hover{
+    border-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px 1px rgb(0, 0, 0);
+}
+.formulario input::placeholder {
+    color: white;
+    font-family: "Momo Trust Display", sans-serif;
+}
+.botao{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    transform: translateY(-30px);
+}
+.botao a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-color: rgb(230, 123, 62);
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Momo Trust Display", sans-serif;
+}
+.botao a:hover{
+    background-color:rgb(230, 123, 62);
+    color: white;
+    transition: 0.5s;
+    box-shadow: 1px 1px 10px 1px rgb(0, 0, 0);
+}
+.botao a:not(:hover){
+    transition: 0.5s;
+}
+
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+/*-----------------------------PAGINA PRINCIPAL DO SITE---------------------------------------*/
+
+/*--------------------------------NAVEGAÇÃO-------------------------------*/
+
+.nave{
+    display: flex;
+    justify-content:center;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+    box-shadow: 0px 3px 3px 0px rgb(235, 157, 42);
+}
+.nave ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(10px, 4vw, 80px);
+    justify-content: center;
+    width: 90%;
+    padding: 0;
+   /* background-color: rgb(21, 255, 0);*/
+}
+@media(max-width: 500px){
+    .nave ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .listaIMG{
+        grid-row: span 2;
+        transform: translateY(20px);
+    }
+    .listaIMG:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+    }
+    .listaIMG:not(:hover){
+    transition: 0.5s;
+    }
+}
+.nave img{
+    width: 100px;
+    height: 100px;
+    /*background-color: beige;*/
+}
+.listaIMG{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lista{
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    /*background-color: aquamarine;*/
+    align-items: center;
+}
+.listaIMG:hover{
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+.listaIMG:not(:hover){
+    transition: 0.5s;
+}
+.lista:hover{
+    transition: 0.5s;
+    border-radius: 15px;
+    transform: translateY(-10px);
+    text-shadow:
+    -1px -1px 2px rgb(235, 157, 42),
+     1px -1px 2px rgb(235, 157, 42),
+    -1px  1px 2px rgb(235, 157, 42),
+     1px  1px 2px rgb(235, 157, 42);
+}
+.lista:not(:hover){
+    transition: 1s;
+}
+.lista a{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(235, 157, 42);
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: bold;
+    height: 30px;
+}
+
+/*--------------------------------BANNER INICIAL-------------------------------*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    border-top: 2px solid black;
+    position: relative;
+    margin-bottom: 100px;
+}
+.imag{
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;  ESSENCIAL: Faz o corte (crop) 
+    object-position: center;
+    object-fit: cover;*/
+    mask-image: linear-gradient(to bottom, black 100%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.767) 0%, transparent);
+}
+.textoImg{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+     background: linear-gradient(rgb(235, 157, 42), rgb(173, 127, 57));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    font-size: clamp(25px, 4vw, 500px);
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(10px 10px 3px black);
+}
+/*--------------------------------PRODUTOS-------------------------------*/
+
+.loja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding-top: 90px;
+
+}
+.cards{
+    padding: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, clamp(220px, 30vh, 350px));
+    gap: clamp(10px, 4vw, 80px);
+    justify-content: center;
+    width: 100%;
+}
+@media (max-width: 1025px){
+    .cards{
+        grid-template-columns:repeat(2, clamp(220px, 30vh, 350px));
+    }
+}
+@media (max-width: 500px){
+    .cards{
+        grid-template-columns:repeat(1, clamp(220px, 30vh, 350px));
+    }
+}
+.produto{
+    align-items: center;
+    background-color: rgba(136, 135, 135, 0.397);
+    border-radius: 20px;
+    color: white;
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.produto:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+    background-color: rgba(92, 92, 92, 0.897);
+}
+.produto:not(:hover){
+    transition: 0.5s;
+}
+.img{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+}
+.img img{
+    box-shadow: 0px 0px 20px 2px black;
+    object-fit: cover;
+    height: clamp(150px, 15vh, 230px);
+    width: clamp(190px, 20vh, 290px);
+}
+.name{
+    width: clamp(190px, 20vh, 290px);
+    font-family: "Montserrat", sans-serif;
+    /*background-color: blue;*/
+    height: 40px;
+    display: flex;
+    align-items:center;
+}
+.plataforma{
+    /*background-color: aqua;*/
+    color: rgb(10, 10, 10);
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    width: clamp(190px, 20vh, 290px);
+}
+.preço{
+    color: rgb(230, 168, 37);
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    width: clamp(190px, 20vh, 290px);
+    display: flex;
+    height: 40px;
+    align-items: center;
+
+}
+.comprar{
+    background-color: rgb(230, 168, 37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: clamp(190px, 20vh, 290px);
+    margin-bottom: 20px;
+    color: rgb(73, 73, 73);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    
+}
+.comprar:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    box-shadow: 0px 0px 5000px 0px rgb(0, 0, 0);
+}
+.finalizar{
+    text-decoration: none;
+}
+/*--------------------------------SOBRE A LOJA-------------------------------*/
+.sobre{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: rgb(0, 0, 0);
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+}
+.sobre2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    
+}
+@media(max-width: 1260px){
+    .sobre2{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 70px;
+    
+    }
+
+    .text p{
+        width: 500px;
+    }
+
+    .imagem2 img{
+        box-shadow: 0px 0px 0px 0px rgb(235, 157, 42);
+    }
+}
+@media(max-width: 500px){
+    .text p{
+        width: 300px;
+    }
+
+    .imagem2 img{
+        box-shadow: 20px 0px 20px 0px rgb(235, 157, 42);
+    }
+}
+@media(min-width: 501px){
+    .imagem2 img{
+        box-shadow: 50px 40px 20px -20px rgb(235, 157, 42);
+    }
+}
+
+.imagem2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagem2 img{
+    display: flex;
+    border-radius: 30px;
+    width: clamp(100px, 80vw, 600px);
+    border: 5px black solid;
+    
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    padding-inline: 50px;
+}
+.text p{
+    padding: 10px;
+    color: rgb(235, 157, 42);
+    font-size: clamp(20px, 3vw, 29px);
+    text-align: center;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 0px 20px 0px rgb(235, 157, 42);
+    font-weight: bold;
+}
+
+
